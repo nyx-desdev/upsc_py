@@ -5,3 +5,5 @@ langchain
 PyPDF2
 faiss-cpu
 langchain_google_genai
+streamlit-authenticator==0.1.5
+langchain-community
