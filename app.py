@@ -74,7 +74,7 @@ if authentication_status:
 
         prompt_template = """
         Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in
-        provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+        provided context try to find in the llm model or search through internet. If still there is no answer then just say, "answer is not available", don't provide the wrong answer\n\n
         Context:\n {context}?\n
         Question: \n{question}\n
 
@@ -115,7 +115,7 @@ if authentication_status:
     def main():
         st.header("UPSC Research Assistant")
 
-        user_question = st.text_input("Ask a Question about disaster management")
+        user_question = st.text_input("Ask a Question")
 
         if user_question:
             user_input(user_question)
